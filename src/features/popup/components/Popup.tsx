@@ -19,7 +19,7 @@ function generateLink(url: string) {
 
   // Look up the modified path in urlMap and return the value if found
   if (customWindow.urlMap && modifiedPath in customWindow.urlMap) {
-    return  `https://drive.google.com/file/d/${customWindow.urlMap[modifiedPath]}`;
+    return `https://drive.google.com/file/d/${customWindow.urlMap[modifiedPath]}`;
   }
   return url;
 }
@@ -110,16 +110,14 @@ export const Popup = (props: PopupProps) => {
             >
               {props.value && (
                 <div style={{ background: 'white', margin: 'auto', padding: '7px' }}>
-             
-                  <p>Content: {props.value?.pageContent}
-                  </p>
+                  <p>Content: {props.value?.pageContent}</p>
                   <p>
                     {props.value?.metadata?.source && (
                       <a href={props.value?.metadata?.source} target="_blank" rel="noreferrer">
                         {generateLink(props.value?.metadata?.source)}
-                      </a>)}
+                      </a>
+                    )}
                   </p>
-
                 </div>
               )}
             </div>
