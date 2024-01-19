@@ -473,6 +473,9 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                                 if (URL) {
                                   window.open(src.metadata.source, '_blank');
                                 } else {
+                                  console.log(src);
+
+                                  // find string in src and replace them with link
                                   setSourcePopupSrc(src);
                                   setSourcePopupOpen(true);
                                 }
